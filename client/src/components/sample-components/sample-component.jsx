@@ -11,7 +11,7 @@ function callServer() {
   });
 }
 
-export function SampleComponent() {
+export default function SampleComponent() {
   return (
     <div>
       This is a sample component

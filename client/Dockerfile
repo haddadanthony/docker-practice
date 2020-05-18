@@ -1,11 +1,6 @@
-FROM node:10-alpine
-
-RUN mkdir -p /app
+FROM node:10-alpine AS alpine
 WORKDIR /app
-
-COPY package.json /app
-COPY . /app
-
+COPY package.json .
 RUN npm install
-
-CMD ["npm", "start"]
+COPY . .
+CMD ["npm", "run", "start"]
